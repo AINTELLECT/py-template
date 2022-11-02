@@ -10,8 +10,12 @@ create: check
 	@mkdir $(name) && touch $(name)/__init__.py
 	@mkdir -p typings/$(name) && touch typings/$(name)/__init__.pyi
 	@mkdir tests
+	@echo "# $(name)" > README.md
+	@sed -r 's/PACKAGE_NAME/$(name)/'\
+		.pre-commit-config.yaml.template > .pre-commit-config.yaml
+	@rm .pre-commit-config.yaml.template
 
-start: check # initialise this project
+setup: check
 	@echo "🚧 Setting up the project environment..."
 	@gitmoji -i >/dev/null 2>&1 ||\
 		(echo "⚠️ WARNING: No 'gitmoji' found in PATH.";\
@@ -19,14 +23,14 @@ start: check # initialise this project
 	@poetry install
 	@poetry run pre-commit install
 	@poetry run pre-commit install --hook-type pre-push
+
+activate: check
 	@poetry shell
 
+start: check setup activate
+
 # make NAME="py_template" start
-init: check create start
-	@echo "# $(name)" > README.md
-	@sed -r 's/PACKAGE_NAME/$(name)/'\
-		.pre-commit-config.yaml.template > .pre-commit-config.yaml
-	@rm .pre-commit-config.yaml.template
+init: create start
 
 update: check # update
 	@echo "🚧 Updating environment..."
