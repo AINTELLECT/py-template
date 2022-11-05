@@ -69,7 +69,7 @@ repos:
       language: system
       pass_filenames: false
       stages: [push]
-      args: [tests]
+      args: [--doctest-modules]
     - id: stubtest
       name: mypy (stubtest)
       language: system
