@@ -11,3 +11,7 @@
 # Use '_' instead of '-'
 make name=py_template init
 ```
+
+---
+
+_[contact@aintellect.org](mailto:contact@aintellect.org)_
