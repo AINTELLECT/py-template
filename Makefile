@@ -11,8 +11,8 @@ create: check
 	@mkdir -p typings/$(name) && touch typings/$(name)/__init__.pyi
 	@mkdir tests && \
 	echo 'def test_example():\
-	\n\t"""Always True."""\
-	\n\tassert 1 == 1 ' > tests/test_example.py
+	\n    """Always True."""\
+	\n    assert 1 == 1 ' > tests/test_example.py
 	@echo "# $(name)" > README.md
 	@sed -r 's/PACKAGE_NAME/$(name)/'\
 		.pre-commit-config.yaml.template > .pre-commit-config.yaml
