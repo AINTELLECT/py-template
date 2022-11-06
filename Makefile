@@ -12,7 +12,7 @@ create: check
 	@mkdir tests && \
 	echo 'def test_example():\
 	\n    """Always True."""\
-	\n    assert 1 == 1 ' > tests/test_example.py
+	\n    assert 1 == 1' > tests/test_example.py
 	@echo "# $(name)" > README.md
 	@sed -r 's/PACKAGE_NAME/$(name)/'\
 		.pre-commit-config.yaml.template > .pre-commit-config.yaml
