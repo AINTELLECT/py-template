@@ -51,13 +51,12 @@ repos:
           - wemake-python-styleguide
           - flake8-pyi
 
-  - repo: https://github.com/RobertCraigie/pyright-python
-    rev: v1.1.278
-    hooks: # https://github.com/Microsoft/pyright
-    - id: pyright
-
   - repo: local
     hooks:
+    - id: pyright
+      name: pyright
+      entry: pyright
+      language: node
     - id: mypy
       name: mypy
       entry: mypy --exclude typings .

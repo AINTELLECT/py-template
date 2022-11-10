@@ -22,7 +22,7 @@ setup: check
 	@echo "🚧 Setting up the project environment..."
 	@gitmoji -i >/dev/null 2>&1 ||\
 		(echo "⚠️ WARNING: No 'gitmoji' found in PATH.";\
-		echo "\tConsider install it: https://gitmoji.dev")	
+		echo "\tConsider install it: https://gitmoji.dev")
 	@poetry install
 	@poetry run pre-commit install
 	@poetry run pre-commit install --hook-type pre-push
@@ -32,7 +32,7 @@ activate: check
 
 start: check setup activate
 
-# make NAME="py_template" start
+# make NAME="py_template" init
 init: create start
 
 update: check # update
