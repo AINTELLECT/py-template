@@ -74,4 +74,4 @@ repos:
       language: system
       pass_filenames: false
       types: [pyi]
-      entry: stubtest PACKAGE_NAME
+      entry: stubtest --mypy-config-file mypy.ini PACKAGE_NAME
