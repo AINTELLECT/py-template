@@ -15,6 +15,27 @@
 make name=py_template init
 ```
 
+## Project structure
+
+Once run `make name=my_project init` command, the project will be structured 
+as follows:
+
+```
+my_project
+├── my_project
+│   └── __init__.py
+├── tests
+│   └── test_example.py
+├── typings
+│   └── my_project
+│       └── __init__.pyi
+├── Makefile
+├── README.md
+├── mypy.ini
+├── poetry.lock
+└── pyproject.toml
+```
+
 ---
 
 _[contact@aintellect.org](mailto:contact@aintellect.org)_
