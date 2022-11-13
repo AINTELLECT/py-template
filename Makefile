@@ -45,6 +45,9 @@ update: check # update
 	@echo "✅ Done"
 
 clean: check #Reset project dependencies
+	@echo "💔 Uninstallin pre-commit hooks..."; \
+		pre-commit uninstall --hook-type pre-push; \
+		pre-commit uninstall
 	@echo "🔥 Reseting poetry environment..."; \
 		poetry env remove --all
 	@echo "✅ Done"
