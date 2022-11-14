@@ -41,7 +41,7 @@ my_project
 Inside the root folder `my_projec`, we find a subfolder also called `my_project` which contains the main logic of the project.
 Consequently, the subfolder `tests` have tests to check that logic, and the subfolder `typings`, which is always optional, contains the stub files of the logic while mirroring the subfolder `my_project`.
 
-Lastly, the `README.md` file is changed with the name of the project, as well as the `.pre-commit-config.yaml` is defined. The `poetry.lock` and `pyproject.toml` are initialized with the basic requirements of the project listed in the [test, list and format tools](https://github.com/AINTELLECT/py-template#test,-lint,-and-format-tools) section.
+Lastly, the `README.md` file is changed with the name of the project, as well as the `.pre-commit-config.yaml` is defined. The `poetry.lock` and `pyproject.toml` are initialized with the basic requirements of the project listed in the [test, list and format tools](https://github.com/AINTELLECT/py-template#test-lint-and-format-tools) section.
 
 ## Test, lint, and format tools
 
