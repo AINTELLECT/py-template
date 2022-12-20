@@ -1,0 +1,21 @@
+{
+	"name": "Python 3",
+	"image": "mcr.microsoft.com/devcontainers/python:0-3.11",
+	"features": {
+		"ghcr.io/devcontainers-contrib/features/npm-package:1": {
+			"package": "gitmoji-cli"
+		},
+		"ghcr.io/devcontainers-contrib/features/poetry:1": {}
+	},
+	"runArgs": [
+		"-v", "${env:HOME}/.gnupg/:/root/.gnupg/",
+		"-v", "${env:SSH_AUTH_SOCK}:${env:SSH_AUTH_SOCK}",
+		"-e", "SSH_AUTH_SOCK=${env:SSH_AUTH_SOCK}"
+	],
+	"onCreateCommand": "gpg-agent --daemon",
+	"postCreateCommand": {
+		"gpgtty": "echo \"export GPG_TTY=$(tty)\" >> /root/.bashrc",
+		"alias": "echo \"alias gc='git commit'\" >> ~/.bashrc"
+	  },
+	"remoteUser": "root"
+}
