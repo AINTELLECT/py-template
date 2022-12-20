@@ -12,6 +12,7 @@
 		"-v", "${env:SSH_AUTH_SOCK}:${env:SSH_AUTH_SOCK}",
 		"-e", "SSH_AUTH_SOCK=${env:SSH_AUTH_SOCK}"	
 	],
+	"onCreateCommand": "echo \"export GPG_TTY=$(tty)\" >> ~/.bashrc",
 	"postCreateCommand": "gpg-agent --daemon",
 	"remoteUser": "root"
 }
