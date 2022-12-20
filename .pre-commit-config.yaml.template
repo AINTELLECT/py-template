@@ -37,11 +37,10 @@ repos:
       - id: check-toml
       - id: check-yaml
       - id: check-xml
-      - id: detect-aws-credentials
       - id: detect-private-key
       - id: check-added-large-files
 
-  - repo: https://gitlab.com/PyCQA/flake8
+  - repo: https://github.com/PyCQA/flake8
     rev: 5.0.4
     hooks:
       - id: flake8

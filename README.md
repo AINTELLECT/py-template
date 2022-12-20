@@ -58,10 +58,9 @@ Lastly, the `README.md` file is changed with the name of the project, as well as
   - `check-toml`
   - `check-yaml`
   - `check-xml`
-  - `detect-aws-credentials`
   - `detect-private-key`
   - `check-added-large-files`
-- [`flake8`](https://gitlab.com/PyCQA/flake8)
+- [`flake8`](https://github.com/PyCQA/flake8)
   - [`wemake-python-styleguide`](https://wemake-python-styleguide.readthedocs.io/)
   - `flake8-pyi`
 - [`pyright`](https://github.com/microsoft/pyright)
