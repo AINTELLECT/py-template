@@ -7,5 +7,11 @@
 		},
 		"ghcr.io/devcontainers-contrib/features/poetry:1": {}
 	},
+	"runArgs": [
+		"-v", "${env:HOME}/.gnupg/:/root/.gnupg/",
+		"-v", "${env:SSH_AUTH_SOCK}:${env:SSH_AUTH_SOCK}",
+		"-e", "SSH_AUTH_SOCK=${env:SSH_AUTH_SOCK}"	
+	],
+	"postCreateCommand": "gpg-agent --daemon",
 	"remoteUser": "root"
 }
