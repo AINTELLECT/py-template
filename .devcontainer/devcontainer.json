@@ -13,5 +13,9 @@
 		"-e", "SSH_AUTH_SOCK=${env:SSH_AUTH_SOCK}"
 	],
 	"onCreateCommand": "gpg-agent --daemon",
+	"postCreateCommand": {
+		"gpgtty": "echo \"export GPG_TTY=$(tty)\" >> /root/.bashrc",
+		"alias": "echo \"alias gc='git commit'\" >> ~/.bashrc"
+	  },
 	"remoteUser": "root"
 }
