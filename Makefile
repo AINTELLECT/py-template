@@ -5,7 +5,7 @@ check: # Dependencies
 	@echo "✅ Poetry installed"
 
 create: check
-	@poetry init --name=$(name) --python=">=3.10"
+	@poetry init --name=$(name) --python=">=3.11"
 	@poetry add -G dev "pre-commit>=2.20.0" "pytest>=7.2.0" "pyright^1.1.278" "flake8^5.0.4" "mypy^0.982"
 	@echo '\n[tool.pyright]\
 	\ninclude = ["$(name)", "tests"]\
