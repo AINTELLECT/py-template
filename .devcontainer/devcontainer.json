@@ -14,8 +14,11 @@
 	],
 	"onCreateCommand": "gpg-agent --daemon",
 	"postCreateCommand": {
-		"gpgtty": "echo \"export GPG_TTY=$(tty)\" >> /root/.bashrc",
-		"alias": "echo \"alias gc='git commit'\" >> ~/.bashrc"
+		"gpgtty": "echo \"export GPG_TTY=$(tty)\" >> /root/.zshrc",
+		"alias": "echo \"alias gc='git commit'\" >> ~/.zshrc"
 	  },
-	"remoteUser": "root"
+	"remoteUser": "root",
+	"settings": {
+		"terminal.integrated.defaultProfile.osx": "zsh"
+	}
 }
